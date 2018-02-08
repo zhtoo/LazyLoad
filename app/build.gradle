@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+println("I'm now compiling with gradle " + project.gradle.gradleVersion);
+
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
@@ -10,7 +12,18 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //开启对vector的向下兼容（5.0以下 Api21以下）
+        vectorDrawables.useSupportLibrary = true
+
+        // Stops the Gradle plugin’s automatic rasterization of vectors
+        //generatedDensities = []
     }
+
+    // Flag to tell aapt to keep the attribute ids around
+//    aaptOptions {
+//        additionalParameters "--no-version-vectors"
+//    }
+
     buildTypes {
         release {
             minifyEnabled false
