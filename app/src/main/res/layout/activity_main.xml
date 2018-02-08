@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start"
-    tools:context="com.zht.lazyload.MainActivity">
+    tools:context="com.zht.lazyload.MainActivity"
+    tools:openDrawer="start">
 
 
     <LinearLayout
@@ -21,28 +21,24 @@
             android:layout_weight="1"/>
 
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#eeeeee"/>
         <android.support.design.widget.BottomNavigationView
             xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/main_bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-           android:id="@+id/main_bottom_navigation"
-            android:elevation="3dp"
             android:layout_gravity="start"
+            android:elevation="3dp"
+            android:background="#FFFFFF"
             app:itemIconTint="@color/selector_bottom_item_color"
             app:itemTextColor="@color/selector_bottom_item_color"
             app:menu="@menu/nain_navigation_items"/>
 
 
-
-
     </LinearLayout>
-
-
-
-
-
-
-
 
 
 </android.support.v4.widget.DrawerLayout>
