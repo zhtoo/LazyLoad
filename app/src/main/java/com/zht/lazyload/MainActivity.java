@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         //禁止滑动效果  disable BottomNavigationView shift mode
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
 
+        //添加监听
+
 
     }
 
